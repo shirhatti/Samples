@@ -27,7 +27,7 @@ namespace TraceTest.Controllers
             _logger.LogError("Test on Node 2 with {@Headers}", _contextAccessor.HttpContext.Request.Headers);
 
             var client = _httpClientFactory.CreateClient();
-            var result = await client.GetAsync("http://localhost:5020/WeatherForecast?test=three");
+            var result = await client.GetAsync("https://localhost:5021/WeatherForecast?test=three");
 
             var content = await result.Content.ReadAsStringAsync();
 
